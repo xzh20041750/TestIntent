@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><!--声明
+xm'l文件的版本，encoding是声明采用utf-8编码-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"  package="com.dprintf3.testintent">
+    <!--xmlns表示定义android的命名空间，用于标示命名空间的地址不会被解析器用于查找信息。
+    其惟一的作用是赋予命名空间一个惟一的名称-->
+
+<!--manifest这一层是根元素-->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"><!--allowbackup当这个标志被设置为true,
+        应用程序数据可以备份和恢复用户使用adb备份和恢复。@mipmap/ic_launcher表示在mipmap里面找到
+        名称为ic_launcher的图标，@string/app_name表示在xml文件中找到string元素名称为APP_name的字符串-->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".OtherActivity"></activity>
+    </application>
+
+</manifest>
